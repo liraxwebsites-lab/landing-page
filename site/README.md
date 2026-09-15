@@ -1,8 +1,8 @@
 # Lirax — Landing Page
 
-Landing page institucional da **Lirax Digital Agency**: sites profissionais e presença digital de alto impacto para empresas e microempreendedores de todo o Brasil.
+Landing page institucional da **Lirax Agência Digital**: sites profissionais e presença digital de alto impacto para empresas e microempreendedores de todo o Brasil.
 
-## Stack
+## Tecnologias
 
 - HTML + **CSS puro** + JS vanilla (zero frameworks, zero build)
 - Tipografia via Google Fonts (Plus Jakarta Sans + Space Grotesk)
@@ -28,7 +28,7 @@ site/               ← raiz do deploy (é isso que vai pro GitHub/Vercel)
 
 Abra `site/index.html` no navegador. Sem build, sem servidor.
 
-## Deploy na Vercel
+## Publicação na Vercel
 
 - **Opção A (recomendada):** suba só o conteúdo de `site/` como raiz do repositório.
 - **Opção B:** suba a pasta inteira e configure **Root Directory = `site`** nas configurações do projeto na Vercel.
