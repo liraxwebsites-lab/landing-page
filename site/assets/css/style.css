@@ -174,6 +174,7 @@ h3 { font-size: 1.15rem; font-weight: 700; }
 /* demo ao vivo do "antes" (iframe do site de demonstração) */
 .shot-live { padding-bottom: 1rem; }
 .live-frame { position: relative; overflow: hidden; aspect-ratio: 1024 / 780; background: #fff; }
+@media (max-width: 600px) { .live-frame { aspect-ratio: 1 / 1; } }
 .live-frame iframe { position: absolute; top: 0; left: 0; width: 1024px; height: 780px;
   border: 0; transform-origin: top left; }
 /* o preview é sempre rolável; cliques e envios são neutralizados dentro do demo */

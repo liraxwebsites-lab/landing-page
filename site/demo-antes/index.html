@@ -285,6 +285,34 @@
   var h = new Date();
   document.getElementById('data-hoje').innerHTML = 'S&atilde;o Paulo, ' + h.getDate() + ' de ' + meses[h.getMonth()] + ' de ' + h.getFullYear();
 </script>
+<style>
+/* Remendo responsivo: evita corte horizontal em telas estreitas.
+   O layout continua feio — só deixa de estourar para o lado. */
+img { max-width: 100%; height: auto; }
+@media (max-width: 820px) {
+  .prod-grid td, .depo td { display: block; width: auto !important; }
+  .sobre img.foto { float: none; display: block; width: 100%; margin: 0 0 12px 0; }
+  .searchbox input { width: 150px; }
+}
+</style>
+<style>
+/* Modo mobile de verdade (iframe na largura do aparelho): empilha o layout,
+   mas mantem a estetica feia original. */
+@media (max-width: 560px) {
+  .topbar table td { display: block; text-align: left !important; }
+  .header > table, .header > table tr, .header > table td,
+  .sobre > table, .sobre > table tr, .sobre > table td,
+  .footer > table, .footer > table tr, .footer > table td,
+  .serv-table, .serv-table tr, .serv-table td,
+  .depo table, .depo table tr, .depo table td { display: block; width: auto !important; }
+  .contato > table > tbody > tr > td { display: block; width: auto !important; }
+  .menu a { display: block; border-right: 0; border-bottom: 1px solid #cc6a00; }
+  .banner-text { position: static; width: auto; margin: 10px; }
+  .selo { width: 88px; height: 88px; font-size: 12px; padding-top: 18px; }
+  .logo-text { font-size: 28px; }
+  .form-contato input, .form-contato textarea { width: 100%; }
+}
+</style>
 <style type="text/css">a, button, input[type="submit"] { cursor: default !important; }</style>
 <script type="text/javascript">
   // Pagina de demonstracao: animacao e rolagem funcionam,

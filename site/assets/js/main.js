@@ -27,11 +27,21 @@
   });
   // Previews ao vivo (antes/depois): renderizam os demos em janela de 1024px
   // e reduzem proporcionalmente para caber nos painéis.
+  // Desktop: demo renderizado em 1024px e reduzido proporcionalmente.
+  // Celular: iframe na largura real do aparelho, sem escala — cada demo
+  // usa seu proprio layout responsivo (o feio tem remendo proprio).
   function fitFrame(frame, inner) {
     if (!frame || !inner || !frame.clientWidth) return;
-    var s = frame.clientWidth / 1024;
-    inner.style.transform = "scale(" + s + ")";
-    frame.style.height = Math.round(780 * s) + "px";
+    if (window.matchMedia("(max-width: 600px)").matches) {
+      inner.style.width = "100%";
+      inner.style.transform = "";
+      frame.style.height = frame.clientWidth + "px"; // quadro quadrado 1:1
+    } else {
+      inner.style.width = "1024px";
+      var s = frame.clientWidth / 1024;
+      inner.style.transform = "scale(" + s + ")";
+      frame.style.height = Math.round(780 * s) + "px";
+    }
   }
   var frames = [
     [document.getElementById("live-frame"), document.getElementById("live-iframe")],
