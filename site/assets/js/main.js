@@ -45,7 +45,8 @@
   }
   var frames = [
     [document.getElementById("live-frame"), document.getElementById("live-iframe")],
-    [document.getElementById("live-frame-depois"), document.getElementById("live-iframe-depois")]
+    [document.getElementById("live-frame-depois"), document.getElementById("live-iframe-depois")],
+    [document.getElementById("live-frame-trabalho"), document.getElementById("live-iframe-trabalho")]
   ];
   function fitLive() {
     frames.forEach(function (pair) { fitFrame(pair[0], pair[1]); });

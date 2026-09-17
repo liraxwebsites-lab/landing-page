@@ -194,6 +194,22 @@ h3 { font-size: 1.15rem; font-weight: 700; }
   border: 1px solid var(--line); padding: 0.15rem 0.7rem; border-radius: 999px; }
 /* (o "depois" agora é um demo ao vivo — mockup CSS aposentado) */
 
+/* ---------- trabalhos ---------- */
+#trabalhos { border-bottom: 1px solid var(--line); }
+.page-top { padding-top: 11rem; }
+.works { margin-top: 2.5rem; }
+.works-more { margin-top: 1.2rem; text-align: right; }
+.work { position: relative; display: grid; grid-template-columns: 7fr 5fr; gap: 2.5rem; align-items: start;
+  border: 1px solid var(--line-strong); background: rgba(12,12,14,.7); padding: 2rem; }
+.work-info { display: flex; flex-direction: column; gap: 0.9rem; }
+.work-info h3 { font-size: 1.35rem; }
+.work-info > p:not(.card-index) { font-size: 0.9rem; line-height: 1.7; }
+.work-meta { display: flex; flex-wrap: wrap; gap: 1.6rem; border-top: 1px solid var(--line);
+  padding-top: 1.1rem; margin-top: 0.3rem; }
+.work-meta dt { font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--text-dim); }
+.work-meta dd { margin-top: 0.3rem; font-size: 0.9rem; font-weight: 600; color: var(--white); }
+
 /* ---------- benefícios ---------- */
 .benefits-grid { display: grid; grid-template-columns: 7fr 5fr; gap: 3rem; align-items: center; }
 .benefit-list { display: grid; gap: 1.2rem; margin-top: 2rem; }
@@ -274,6 +290,7 @@ h3 { font-size: 1.15rem; font-weight: 700; }
 @media (max-width: 960px) {
   .hero-grid, .benefits-grid { grid-template-columns: 1fr; }
   .compare-grid { grid-template-columns: 1fr; }
+  .work { grid-template-columns: 1fr; }
   .compare-arrow { transform: rotate(90deg); justify-self: center; }
   .cards, .steps { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
@@ -285,10 +302,12 @@ h3 { font-size: 1.15rem; font-weight: 700; }
 }
 @media (max-width: 600px) {
   .section { padding: 4rem 0; }
+  .page-top { padding-top: 8.5rem; }
   .hero { padding-top: 8.5rem; }
   .header-actions .btn { display: none; }
   .metrics { gap: 1.2rem; }
   .compare { padding: 1.4rem; }
+  .work { padding: 1.4rem; }
   .footer-grid { grid-template-columns: 1fr; }
   .cta-actions .btn { width: 100%; }
 }
